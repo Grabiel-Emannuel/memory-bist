@@ -1,3 +1,3 @@
 docker pull verilator/verilator
 
-docker run --rm -v $(pwd):/work:z verilator --lint-only -sv -Wall rtl/*
+docker run --rm -v $(pwd):/work:z verilator/verilator --lint-only -sv -Wall rtl/*
