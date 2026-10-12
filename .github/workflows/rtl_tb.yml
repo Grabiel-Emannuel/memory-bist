@@ -1,0 +1,16 @@
+name: Verification for Changes in rtl & tb
+
+on:
+  pull_request:
+    paths:
+      - 'rtl/**'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Lint changes on rtl directory
+        run: make lint
