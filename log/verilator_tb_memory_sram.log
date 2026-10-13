@@ -1,0 +1,12 @@
+Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
+%Warning-MULTITOP: rtl/memory_sram1.sv:1:8: Multiple top level modules
+                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
+                   ... For warning description see https://verilator.org/warn/MULTITOP?v=5.052
+                   ... Use "/* verilator lint_off MULTITOP */" and lint_on around source to disable this message.
+                                          : ... Top module 'tb_memory_sram'
+    1 | module tb_memory_sram;
+      |        ^~~~~~~~~~~~~~
+                                          : ... Top module 'memory_sram1'
+    1 | module memory_sram1 #(
+      |        ^~~~~~~~~~~~
+%Error: Exiting due to 1 warning(s)
