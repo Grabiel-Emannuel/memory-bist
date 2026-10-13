@@ -4,13 +4,20 @@ on:
   pull_request:
     paths:
       - 'rtl/**'
+      - 'tb/**'
 
 jobs:
-  lint:
+  rtl-quality-control:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Pull verilator
+        run: make pull
+
       - name: Lint changes on rtl directory
         run: make lint
+
+      - name: Log check testbench simulaltions
+        run: make log-check
