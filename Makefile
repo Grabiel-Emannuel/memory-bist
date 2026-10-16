@@ -15,18 +15,22 @@ help:
 	@echo "  make log-check - Check log simulations"
 	@echo "  make pull      - Pull verilator image"
 	@echo "  make test      - Run testbench simulations"
+	@echo "  make synth     - Run a Yosys Synth script. Use SCRIPT=<script file_name>"
 
 env:
-	@bash script/load-env.sh $(PDK_ROOT) $(PDK_VERSION) $(PDK_STD_LIB) $(PDK_TT_LIB) $(PDK_SS_LIB) $(PDK_FF_LIB) 
+	@bash script/make/load-env.sh $(PDK_ROOT) $(PDK_VERSION) $(PDK_STD_LIB) $(PDK_TT_LIB) $(PDK_SS_LIB) $(PDK_FF_LIB) 
 
 lint:
-	@bash script/lint.sh
+	@bash script/make/lint.sh
 
 log-check:
-	@bash script/log-check.sh
+	@bash script/make/log-check.sh
 
 pull:
-	@bash script/pull.sh
+	@bash script/make/pull.sh
 
 test:
-	@bash script/test.sh
+	@bash script/make/test.sh
+
+synth:
+	@tclsh script/yosys/${SCRIPT}
