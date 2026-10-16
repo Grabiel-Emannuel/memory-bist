@@ -1,12 +1,9 @@
 Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
-%Warning-MULTITOP: rtl/memory_sram1.sv:1:8: Multiple top level modules
-                                          : ... Suggest see manual; fix the duplicates, or use --top-module to select top.
-                   ... For warning description see https://verilator.org/warn/MULTITOP?v=5.052
-                   ... Use "/* verilator lint_off MULTITOP */" and lint_on around source to disable this message.
-                                          : ... Top module 'tb_memory_sram'
-    1 | module tb_memory_sram;
-      |        ^~~~~~~~~~~~~~
-                                          : ... Top module 'memory_sram1'
-    1 | module memory_sram1 #(
-      |        ^~~~~~~~~~~~
-%Error: Exiting due to 1 warning(s)
+make: Entering directory '/work/sim/obj_tb_memory_sram'
+ccache g++ -Os  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=1 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -DVM_VPI=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-int-in-bool-context -Wno-shadow -Wno-sign-compare -Wno-subobject-linkage -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -DVL_TIME_CONTEXT   -fcoroutines -c -o Vtb_memory_sram__ALL.o Vtb_memory_sram__ALL.cpp
+g++    verilated.o verilated_vcd_c.o verilated_timing.o verilated_threads.o Vtb_memory_sram__ALL.a    -pthread -lpthread -latomic   -o Vtb_memory_sram
+rm Vtb_memory_sram__ALL.verilator_deplist.tmp
+make: Leaving directory '/work/sim/obj_tb_memory_sram'
+- V e r i l a t i o n   R e p o r t: Verilator 5.052 2026-09-05 rev v5.052
+- Verilator: Built from 0.000 MB sources in 0 modules, into 0.000 MB in 0 C++ files needing 0.000 MB
+- Verilator: Walltime 1.193 s (elab=0.000, cvt=0.000, bld=1.193); cpu 0.001 s on 1 threads; allocated 15.094 MB

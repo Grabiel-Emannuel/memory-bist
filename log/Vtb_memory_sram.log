@@ -23716,5 +23716,5 @@
 *** PASS: Memory SRAM is a success! ***
 - tb/tb_memory_sram.sv:75: Verilog $finish
 - S i m u l a t i o n   R e p o r t: Verilator 5.052 2026-09-05
-- Verilator: $finish at 474us; walltime 0.091 s; speed 5.232 ms/s
-- Verilator: cpu 0.035 s on 1 threads; allocated 4 MB
+- Verilator: $finish at 474us; walltime 0.094 s; speed 5.070 ms/s
+- Verilator: cpu 0.041 s on 1 threads; allocated 4 MB
